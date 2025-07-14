@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="intro">MR DEEMED TO BE UNIVERSITY</h1>
+    <button onclick="names()">submit</button>
+    <p class="text">NAME</p>
+    <P class="text">ROLL NO</P>
+    <P class="text">SECTION</P>
+    <P class="text">BRANCH</P>
+
+    
+    <button onclick="color()">submit</button>
+        <script>
+        const names=()=>{
+        const heads=document.getElementById("intro");
+        heads.style.color="red";
+        
+        
+        const para=document.getElementsByClassName("text")
+        for(let i=0;i<para.length;i++){
+        para[1].style.color="blue";
+        }
+        
+       
+    }
+    </script>
+</body>
+</html>
