@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <input type="text" id="display" >
+    <input type="text" id="display">
     <p id="output"></p>
-   
+
+    <!--increment and decrement-->
+    <button id="decrement">DECREMENT</button>
+    <p id="counter">0</p>
+    <button id="increment">INCREMENT</button>
+
     <script>
-        document.getElementById("display").addEventListener("input",function(){
-            document.getElementById("output").innerHTML="youreleased:"+this.value
+        document.getElementById("display").addEventListener("input", function () {    //input
+            document.getElementById("output").innerHTML = "youreleased:" + this.value
         });
-       
-        document.getElementById("output").addEventListener("dblclick",function(){
-            this.style.color="red";
+
+        document.getElementById("output").addEventListener("dblclick", function () {    //dblclick
+            this.style.color = "red";
         });
-        document.getElementById("display").addEventListener("dblclick",function(){
+        document.getElementById("display").addEventListener("dblclick", function () {   //dblclick
             alert("double clicked");
         });
-        document.getElementById("display").addEventListener("focus",function(){
-            this.style.backgroundColor="red";
+        
+        document.getElementById("display").addEventListener("mouseover", function () {   //focus
+            this.style.backgroundColor = "red";
         });
-        document.getElementById("display").addEventListener("blur",function(){
-            this.style.backgroundColor="white";
+        document.getElementById("display").addEventListener("mouseout", function () {   //blur
+            this.style.backgroundColor = "white";
         });
+        //increment and decrement
+        let count = 0;
+        document.getElementById("decrement").addEventListener("click", function () {  //decrement
+            count = count - 1;
+            counter.innerHTML=count
+
+            //document.getElementById("count").innerHTML = count;
+        });
+
+
+        document.getElementById("increment").addEventListener("click", function () {  //increment
+            count = count + 1;
+            counter.innerHTML=count
+
+            //document.getElementById("count").innerHTML = count;
+        });
+
+
+
 
     </script>
 </body>
+
 </html>
