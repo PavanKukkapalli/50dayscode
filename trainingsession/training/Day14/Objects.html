@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="car">name:</p>
+    <p id="model">model:</p>
+    <p id="year">year:</p>
+    <script>
+        let cars=[{name:"shift dizire",model:"2023",year:"2025"},{name:" dizie",model:"2023",year:"2025"},
+            {name:" dizire",model:"2023",year:"2025"}
+        ];
+        
+        let firstcar=cars[0];
+        document.getElementById("car").textContent=firstcar.name;
+        document.getElementById("model").textContent=firstcar.model;
+        document.getElementById("year").textContent=firstcar.year;
+       
+    </script>
+</body>
+</html>
