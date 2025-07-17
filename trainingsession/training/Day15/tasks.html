@@ -39,14 +39,16 @@
     console.log("people with full name:",peopleWithFullName);*/
 
     const products=[
-        {item:"fan",price:"$100",category:"electronics"},
-        {item:"Ac",price:"$75",category:"electronics"},
-        {item:"cooler",price:"$150",category:"electronics"},
-        {item:"benz",price:"$500",category:"cars"},
-        {item:"books",price:"$50",category:"book"}
+        {item:"fan",price:100,category:"electronics"},
+        {item:"Ac",price:75,category:"electronics"},
+        {item:"cooler",price:150,category:"electronics"},
+        {item:"benz",price:500,category:"cars"},
+        {item:"books",price:50,category:"book"}
     ];
     let product=products.filter(pro=>pro.category=="electronics"&&pro.price>="$100")
-console.log(product);       
+console.log(product);  
+const n = [1, 2, 3];
+n.forEach((num) => console.log(num * 2));     
     </script>
 </body>
 
