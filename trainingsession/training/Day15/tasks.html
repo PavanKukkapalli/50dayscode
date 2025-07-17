@@ -8,12 +8,13 @@
 </head>
 
 <body>
-    <p id="firstname"></p>
+   <!-- <p id="firstname"></p>
     <p id="secondname"></p>
     <p id="fullname"></p>
-  <div id="output"></div>
+  <div id="output"></div> -->
+
     <script>
-        let name = { firstname: "Durga", secondname: "naga pavan", lastname: "kukkapalli" };
+   /*     let name = { firstname: "Durga", secondname: "naga pavan", lastname: "kukkapalli" };
         let names = name[0];
         document.getElementById("firstname").textContent = "FIRSTNAME: " + name.firstname;
         document.getElementById("secondname").textContent = "SECONDNAME: " + name.secondname;
@@ -22,13 +23,20 @@
 
         let list = [{ firstname: "Durga", secondname: "naga pavan", lastname: "kukkapalli" }, { firstname: "shiva", secondname: "krishna", lastname: "velugula" }, { firstname: "shva", secondname: "krishn", lastname: "velugua" }];
      
-        for(let i=0;i<=3;i++){
-         let lists = list[i];
-        document.getElementById("output").innerHTML +=<p>${}</p>
-        
-      
-        }
-    
+       
+       let lists = list.map(name=>
+        return{}
+       )
+      */
+        const people = [{firstName:"john",lastName:"Doe"},
+            {firstName:"Jane",lastName:"smith"},
+            {firstName:"peter",lastName:"Jones"}
+        ];
+        const peopleWithFullName = people.map(person=>{
+            return{...person,fullName:`${person.firstName}${person.lastName}`};
+        });
+    console.log("original people:",people)
+    console.log("people with full name:",peopleWithFullName);
     </script>
 </body>
 
