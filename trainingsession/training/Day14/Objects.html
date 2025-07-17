@@ -6,19 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="car">name:</p>
-    <p id="model">model:</p>
-    <p id="year">year:</p>
+    <p id="car"></p>
+    <p id="model"></p>
+    <p id="year"></p>
     <script>
         let cars=[{name:"shift dizire",model:"2023",year:"2025"},{name:" dizie",model:"2023",year:"2025"},
             {name:" dizire",model:"2023",year:"2025"}
         ];
         
-        let firstcar=cars[0];
-        document.getElementById("car").textContent=firstcar.name;
-        document.getElementById("model").textContent=firstcar.model;
-        document.getElementById("year").textContent=firstcar.year;
+       
+        document.getElementById("car").textContent=map.cars.name;
+        document.getElementById("model").textContent=map.cars.model;
+        document.getElementById("year").textContent=map.cars.year;
        
     </script>
 </body>
-</html>
+</html> 

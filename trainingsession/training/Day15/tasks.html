@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="firstname"></p>
+    <p id="secondname"></p>
+    <p id="fullname"></p>
+  <div id="output"></div>
+    <script>
+        let name = { firstname: "Durga", secondname: "naga pavan", lastname: "kukkapalli" };
+        let names = name[0];
+        document.getElementById("firstname").textContent = "FIRSTNAME: " + name.firstname;
+        document.getElementById("secondname").textContent = "SECONDNAME: " + name.secondname;
+        document.getElementById("fullname").textContent = "LASTNAME: " + name.lastname;
+
+
+        let list = [{ firstname: "Durga", secondname: "naga pavan", lastname: "kukkapalli" }, { firstname: "shiva", secondname: "krishna", lastname: "velugula" }, { firstname: "shva", secondname: "krishn", lastname: "velugua" }];
+     
+        for(let i=0;i<=3;i++){
+         let lists = list[i];
+        document.getElementById("output").innerHTML +=<p>${}</p>
+        
+      
+        }
+    
+    </script>
+</body>
+
+</html>
