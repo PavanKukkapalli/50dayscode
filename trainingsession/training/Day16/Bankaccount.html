@@ -16,29 +16,36 @@
     <p id="output"></p>
     <script>
 
-        function createAccount(){
-            let  balance =0;
-            return{ deposit: amt=>balance+=amt,
-                    withdraw: amt=>balance-=amt,
-                    getBalance: ()=>balance
+        function createAccount() {
+            let balance = 0;
+            return {
+                deposit: amt => balance += amt,
+                withdraw: amt => balance -= amt,
+                getBalance: () => balance
             };
         }
-            document.getElementById("deposit").addEventListener("click", function () {
+
+
+        let account = createAccount();
+
+
+        document.getElementById("deposit").addEventListener("click", function () {
             let value = prompt("deposit the ammount")
-            let amt=Number(value)
+            let amt = Number(value)
             account.deposit(amt)
 
             document.getElementById("output").innerHTML = "deposited:" + amt;
             console.log(value)
         })
         document.getElementById("withdraw").addEventListener("click", function () {
-          let valu = prompt("withdraw the amount");
-          let nums=Number(valu)
-         let tat= document.getElementById("output").innerHTML = "withdraw ammount" +nums;
-           console.log(tat) 
+            let valu = prompt("withdraw the amount");
+            let amt = Number(valu)
+            let tat = document.getElementById("output").innerHTML = "withdraw ammount" + amt;
+            console.log(tat)
         });
         document.getElementById("balance").addEventListener("click", function () {
-         let bal =  document.getElementById("output").innerHTML = "currentbalance" + value-valu;
+             let balance=account.balance
+            let bal = document.getElementById("output").innerHTML = "currentbalance" + balance;
         })
     </script>
 </body>
