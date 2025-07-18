@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <h1>Bank Account</h1>
+
+    <button id="deposit">Deposit</button>
+    <button id="withdraw">Withdraw</button>
+    <button id="balance">Check Balance</button>
+    <p id="output"></p>
+    <script>
+
+        function createAccount(){
+            let  balance =0;
+            return{ deposit: amt=>balance+=amt,
+                    withdraw: amt=>balance-=amt,
+                    getBalance: ()=>balance
+            };
+        }
+            document.getElementById("deposit").addEventListener("click", function () {
+            let value = prompt("deposit the ammount")
+            let amt=Number(value)
+            account.deposit(amt)
+
+            document.getElementById("output").innerHTML = "deposited:" + amt;
+            console.log(value)
+        })
+        document.getElementById("withdraw").addEventListener("click", function () {
+          let valu = prompt("withdraw the amount");
+          let nums=Number(valu)
+         let tat= document.getElementById("output").innerHTML = "withdraw ammount" +nums;
+           console.log(tat) 
+        });
+        document.getElementById("balance").addEventListener("click", function () {
+         let bal =  document.getElementById("output").innerHTML = "currentbalance" + value-valu;
+        })
+    </script>
 </body>
+
 </html>
