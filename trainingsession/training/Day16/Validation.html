@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+       
+        <label for="usename">USER NAME:</label>
+         <input type="text" id="username" placeholder="enter username">
+        <br>
+        <label for="email" >E MAIL</label>
+         <input type="email" id="email" placeholder=" enter email">
+       <br>
+        <label for="password" placeholder="password"> Password</label>
+         <input type="password" id="pass" placeholder=" enter password">
+<br>
+<button type="submit">submit</button>
+    </form>
+    <script>
+        document.getElementById("username").addEventListener("focus",function(){
+            this.style.backgroundColor="red";
+        })
+    </script>
+</body>
+</html>
